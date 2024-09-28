@@ -8,9 +8,9 @@ function App() {
 
 
   useEffect(() => {
-    fetch('https://api.magicthegathering.io/v1/cards')
-      .then(res => res.json())
-      .then(data => setMTGCards(data.cards))
+    // fetch('https://api.magicthegathering.io/v1/cards')
+    //   .then(res => res.json())
+    //   .then(data => setMTGCards(data.cards))
   }, [])
 
 
