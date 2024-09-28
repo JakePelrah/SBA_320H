@@ -7,7 +7,7 @@ import express from 'express';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Define the port for the server
-const port = 5001;
+const port = process.env.PORT || 5001
 const app = express();
 
 // Middleware setup
