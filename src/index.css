@@ -1,0 +1,172 @@
+@font-face {
+    font-family: MTG;
+    src: url('fonts/goudy-medieval/Goudy\ Medieval\ Alternate.ttf');
+}
+
+:root {
+    --navbar-color: #F24333;
+    --navbar-hover-color: #a72f24;
+    --bg-color: #272727;
+    --secondary-color: #454545;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--navbar-color);
+}
+
+.navbar {
+    border-bottom: 1px solid rgb(48, 48, 48);
+}
+
+.navbar-brand {
+    font-family: MTG;
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--navbar-color);
+}
+
+.navbar-brand:hover {
+    color: var(--navbar-color);
+}
+
+.offcanvas {
+    background-color: var(--bg-color);
+    color: var(--navbar-color);
+    width: 22em !important;
+    border: none !important;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.offcanvas-body {
+    width: 22em !important;
+    overflow-y: scroll;
+    border-top: none;
+}
+
+/* WebKit scrollbar styles */
+.offcanvas-body::-webkit-scrollbar {
+    width: .75em;
+    background: var(--bg-color);
+    /* Background of the scrollbar track */
+}
+
+.offcanvas-body::-webkit-scrollbar-thumb {
+    background-color: var(--navbar-color);
+    border-radius: 2px;
+}
+
+.offcanvas-body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--navbar-hover-color);
+}
+
+.offcanvas-header>.navbar-brand {
+    margin-left: .25em;
+    margin-bottom: .13em;
+}
+
+.mana-icon {
+    width: 2em;
+    height: 2em;
+}
+
+.color-checkbox {
+    font-size: 1.2em;
+    border-radius: 2em !important;
+    border: none;
+    box-shadow: none !important;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.color-checkbox:checked {
+    background-color: #F24333;
+}
+
+
+.accordion-body {
+    border-top: 2px solid var(--bg-color);
+    background-color: var(--secondary-color) !important;
+}
+
+.accordion-item {
+    background-color: var(--secondary-color);
+    color: var(--navbar-color);
+    border-radius: 2em !important;
+    border: none;
+    outline: none;
+
+}
+
+.accordion-button {
+    border-radius: 2em !important;
+    background-color: var(--secondary-color) !important;
+    color: var(--navbar-color) !important;
+    font-weight: bold;
+    box-shadow: none !important;
+}
+
+#search-icon {
+    width: 2em;
+    height: 2em;
+}
+
+.btn:disabled {
+    border: none;
+    opacity: 1;
+}
+
+
+.search-btn {
+    background-color: var(--secondary-color) !important;
+    border-radius: 2em;
+}
+
+.search-input {
+    border: none;
+    box-shadow: none !important;
+    caret-color: var(--navbar-color);
+    background-color: var(--secondary-color);
+    color: aliceblue;
+    border-radius: 0em 2em 2em 0em;
+    height: 3.3em;
+
+}
+
+.search-input:focus {
+    border: none;
+    box-shadow: none !important;
+    caret-color: var(--navbar-color);
+    background-color: var(--secondary-color);
+    color: aliceblue;
+}
+
+.input-group {
+    border-radius: 2em !important;
+}
+
+input::placeholder {
+    color: #ffffff !important;
+}
+
+
+.dropdown-menu {
+    width: 100%;
+    /* min-height: 1em; */
+    max-height: 10em;
+    overflow-y: hidden;
+}
+
+.dropdown-item:focus{
+background-color: #a7a7a7;
+}
+
+/* .tag-zone{
+    min-height: 2em;
+    background-color: var(--secondary-color);
+    border-radius: 2em;
+} */
+
+.badge{
+    background-color: #F24333;
+}
