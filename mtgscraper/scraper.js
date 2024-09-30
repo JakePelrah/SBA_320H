@@ -53,11 +53,14 @@ mtg.set.all()
     });
 
 // get cards
-// mtg.card.all()
-// .on('data', function (card) {
-//     const json = JSON.stringify(card); //convert it back to json
-//     fs.writeFile(`data/cards/${card.id}.json`, json, 'utf8', cb); 
-// });
+mtg.card.all()
+.on('data', function (card) {
+    const json = JSON.stringify(card); //convert it back to json
+    fs.writeFile(`data/cards/${card.id}.json`, json, 'utf8', cb); 
+}) .on('end', function () {
+
+    console.log('Finished retrieving all cards.');
+});
 
 // import pg from "pg";
 // import dotEnv from "dotenv";

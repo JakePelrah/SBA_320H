@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react"
-import noUiSlider from 'nouislider'
-import 'nouislider/dist/nouislider.css';
-import SearchDropdown from "./SearchDropdown";
+import RangeSlider from "./RangeSlider/RangeSlider";
 
 
 export default function Filter() {
@@ -52,15 +50,42 @@ export default function Filter() {
 
 
     useEffect(() => {
+        // var cmcSlider = document.getElementById('cmc-slider');
+        // var toughnessSlider = document.getElementById('toughness-slider');
+        // var powerSlider = document.getElementById('power-slider');
 
-        var slider = document.getElementById('cmc-slider');
-
-        // noUiSlider.create(slider, {
-        //     start: [20, 80],
+        // noUiSlider.create(cmcSlider, {
+        //     start: [0, 16],
+        //     behaviour: 'unconstrained-tap drag',
+        //     step: 1,
+        //     tooltips: { to: (v) => v.toFixed(0) },
         //     connect: true,
         //     range: {
         //         'min': 0,
-        //         'max': 100
+        //         'max': 16
+        //     }
+        // });
+
+        // noUiSlider.create(toughnessSlider, {
+        //     start: [0, 20],
+        //     behaviour: 'drag',
+        //     step: 1,
+        //     tooltips: { to: (v) => v.toFixed(0) },
+        //     connect: true,
+        //     range: {
+        //         'min': 0,
+        //         'max': 20
+        //     }
+        // });
+        // noUiSlider.create(powerSlider, {
+        //     start: [0, 20],
+        //     behaviour: 'drag',
+        //     step: 1,
+        //     tooltips: { to: (v) => v.toFixed(0) },
+        //     connect: true,
+        //     range: {
+        //         'min': 0,
+        //         'max': 20
         //     }
         // });
 
@@ -77,7 +102,7 @@ export default function Filter() {
 
     const renderTypes = (data) => data.map(item =>
         <div key={item} className="form-check">
-            <input className="form-check-input" type="checkbox" value={item} id="flexCheckDefault" />
+            <input className="form-check-input type-checkbox" type="checkbox" value={item} id="flexCheckDefault" />
             <label className="form-check-label" htmlFor="flexCheckDefault">
                 {item}
             </label>
@@ -91,6 +116,7 @@ export default function Filter() {
         </div>
 
         <div className="accordion accordion-flush filter-accordion mt-5">
+
             <div className="accordion-item mb-2">
                 <h2 className="accordion-header">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -103,12 +129,21 @@ export default function Filter() {
                     </div>
                 </div>
             </div>
-        </div>
 
-        <SearchDropdown />
+            <div className="accordion-item mb-2">
+                <h2 className="accordion-header">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        Subtypes
+                    </button>
+                </h2>
+                <div id="collapseTwo" className="accordion-collapse collapse">
+                    <div className="accordion-body">
+                        {renderTypes(data.subtypes)}
+                    </div>
+                </div>
+            </div>
 
-        <div className="accordion accordion-flush filter-accordion">
-            <div className="accordion-item">
+            <div className="accordion-item mb-2">
                 <h2 className="accordion-header">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Supertypes
@@ -120,14 +155,27 @@ export default function Filter() {
                     </div>
                 </div>
             </div>
+
+            <div className="accordion-item">
+                <h2 className="accordion-header">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Formats
+                    </button>
+                </h2>
+                <div id="collapseFour" className="accordion-collapse collapse">
+                    <div className="accordion-body">
+                        {renderTypes(data.formats)}
+                    </div>
+                </div>
+            </div>
+
         </div>
 
 
-        <div id="cmc-slider"></div>
-        <div id="power-slider"></div>
-        <div id="toughness-slider"></div>
+        <RangeSlider id="CMC" min={0} max={16} />
+        <RangeSlider id="Power" min={0} max={20} />
+        <RangeSlider id="Toughness" min={0} max={20} />
 
-        <div>artist</div>
-        <div>legalities</div>
+
     </div>)
 }
