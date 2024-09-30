@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, 'dist'))); // Serve static files fro
 
 
 app.get('/allCards', async (req, res) => {
-  const {rows} =  await query('SELECT * FROM cards LIMIT 1000')
+  const {rows} =  await query('SELECT * FROM cards')
   console.log(rows)
   res.json(rows)
 })
