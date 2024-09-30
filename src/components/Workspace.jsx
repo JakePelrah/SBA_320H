@@ -59,12 +59,12 @@ export default function Workspace() {
 
     return (<div className="d-flex flex-column workspace">
 
-        <div className="cards d-flex gap-3">
+        <div className="cards d-flex">
             {renderCards}
         </div>
 
 
-        <div className="myDeck d-flex gap-3" onDrop={dropHandler} onDragOver={dragoverHandler}>
+        <div className="myDeck d-flex" onDrop={dropHandler} onDragOver={dragoverHandler}>
         </div>
         <div contextmenu="mymenu">
 
