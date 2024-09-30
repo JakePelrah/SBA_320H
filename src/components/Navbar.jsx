@@ -1,9 +1,9 @@
 
 export default function Navbar() {
 
-  return (<><nav className="navbar  p-3">
+  return (<><nav className="navbar">
     <div className="container-fluid">
-      <div className="navbar-brand">MTG Binder</div>
+      <div className="navbar-brand">MTG-DB</div>
     </div>
   </nav>
   </>

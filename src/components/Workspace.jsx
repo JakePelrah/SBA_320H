@@ -43,7 +43,8 @@ export default function Workspace() {
             {renderCards}
         </div>
 
-<hr/>
+        <hr />
+        
         <div className="myDeck d-flex gap-3" onDrop={dropHandler} onDragOver={dragoverHandler}>
         </div>
 

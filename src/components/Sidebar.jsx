@@ -23,7 +23,7 @@ export default function Sidebar() {
         <div className="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabIndex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
 
             <div className="offcanvas-header">
-                <a className="navbar-brand  mt-1" href="#">MTG Binder</a>
+                <a className="navbar-brand  mt-1" href="#">MTG-DB</a>
             </div>
 
             <div className="offcanvas-body">
