@@ -16,14 +16,9 @@ app.use(express.json()); // Parse JSON bodies
 app.use(express.static(path.join(__dirname, 'dist'))); // Serve static files from 'dist'
 
 
-app.get('/allCards', async (req, res) => {
-  const {rows} =  await query('SELECT * FROM cards')
-  console.log(rows)
-  res.json(rows)
-})
-
 app.post('/cardQuery', async (req, res)=>{
-  console.log(req.body)
+  const { rows } = await query("SELECT * FROM cards WHERE colors @> ARRAY[$1::varchar] LIMIT 100", ['U']);
+  res.json(rows)
 })
 
 // Handle client-side routing, returning all requests to the app

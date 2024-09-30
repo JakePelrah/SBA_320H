@@ -4,8 +4,12 @@ import formats from './formats.json'
 import types from './types.json'
 import subtypes from './subtypes.json'
 import supertypes from './supertypes.json'
+import { useMTG } from "../MTGProvider";
 
 export default function Filter() {
+const {cards, getCards} = useMTG()
+
+console.log(cards)
 
     const [colors, setColors] = useState({
         black: false, red: false,
@@ -14,6 +18,10 @@ export default function Filter() {
 
     const [data, setData] = useState({ types, subtypes, supertypes, formats })
 
+
+    useEffect(()=>{
+        getCards(colors)
+    },[colors])
 
     function onChangeCheckbox(e) {
         console.log(e.target.checked)
