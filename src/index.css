@@ -10,15 +10,14 @@
     --secondary-color: #454545;
 }
 
-
 body{
     background-color: var(--bg-color);
 }
 
-
 .navbar {
-    border-bottom: 1px solid rgb(48, 48, 48);
+    /* border-bottom: 1px solid rgb(48, 48, 48); */
     padding: 0em;
+    background-color: var(--secondary-color);
 }
 
 .navbar-brand {
@@ -168,10 +167,9 @@ footer {
     border: none;
 }
 
-
 .workspace {
     background-color: var(--secondary-color);
-    height: 87vh;
+    height: 94vh;
     width: 100vw;
 }
 
@@ -210,5 +208,6 @@ footer {
     background-color: transparent;
     border: 1em solid transparent;
     border-radius: 1.7em;
+    pointer-events: none;
 }
 

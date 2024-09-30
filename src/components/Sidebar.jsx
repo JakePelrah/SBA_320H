@@ -6,6 +6,12 @@ export default function Sidebar() {
     useEffect(() => {
 
         const myOffcanvas = document.querySelector('.offcanvas')
+        const oc = new bootstrap.Offcanvas(myOffcanvas)
+        oc.show()
+
+        document.querySelector('.cards').classList.add('open')
+        document.querySelector('.myDeck').classList.add('open')
+
         myOffcanvas.addEventListener('hide.bs.offcanvas', event => {
             document.querySelector('.cards').classList.remove('open')
             document.querySelector('.myDeck').classList.remove('open')

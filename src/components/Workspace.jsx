@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function Workspace() {
 
@@ -10,11 +10,27 @@ export default function Workspace() {
         { "name": "Sludge Monster", "manaCost": "{3}{U}{U}", "cmc": 5, "colors": ["U"], "colorIdentity": ["U"], "type": "Creature — Horror", "types": ["Creature"], "subtypes": ["Horror"], "rarity": "Rare", "set": "MID", "setName": "Innistrad: Midnight Hunt", "text": "Whenever Sludge Monster enters the battlefield or attacks, put a slime counter on up to one other target creature.\nNon-Horror creatures with slime counters on them lose all abilities and have base power and toughness 2/2.", "artist": "Svetlin Velinov", "number": "340", "power": "5", "toughness": "5", "layout": "normal", "multiverseid": "538695", "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=538695&type=card", "variations": ["afa03201-81a4-5109-8a67-b16e2f3e0c4f"], "rulings": [{ "date": "2021-09-24", "text": "If a non-Horror creature with a slime counter on it somehow becomes a Horror, the effect making it 2/2 and making it lose its abilities ends. Its base power and toughness will revert to whatever it was before that effect started applying, although other effects that modify power and/or toughness, such as ones created by Auras, counters, and the like may still apply. It'll also have whatever abilities it had before it lost them." }, { "date": "2021-09-24", "text": "Sludge Monster's last ability affects all non-Horror creatures with slime counters on them, not just creatures that had slime counters put on them with Sludge Monster's first ability." }], "foreignNames": [{ "name": "Morastmonster", "text": "Immer wenn das Morastmonster ins Spiel kommt oder angreift, lege eine Schleimmarke auf bis zu eine andere Kreatur deiner Wahl.\nNicht-Schrecken-Kreaturen mit Schleimmarken verlieren alle Fähigkeiten und haben Basis-Stärke und -Widerstandskraft 2/2.", "type": "Kreatur — Schrecken", "flavor": null, "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=538755&type=card", "language": "German", "identifiers": { "scryfallId": "b10338d1-5aa8-4997-a7f4-7aac9ec92a52", "multiverseId": 538755 }, "multiverseid": 538755 }, { "name": "Monstruo del fango", "text": "Siempre que el Monstruo del fango entre al campo de batalla o ataque, pon un contador de fango sobre hasta una otra criatura objetivo.\nLas criaturas que no sean Horror con contadores de fango sobre ellas pierden todas sus habilidades y tienen una fuerza y resistencia base de 2/2.", "type": "Criatura — Horror", "flavor": null, "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=538815&type=card", "language": "Spanish", "identifiers": { "scryfallId": "727e2e45-607a-490d-9ff9-54c1cc0eb8ce", "multiverseId": 538815 }, "multiverseid": 538815 }, { "name": "Vasard", "text": "À chaque fois que le Vasard arrive sur le champ de bataille ou qu'il attaque, mettez un marqueur « boue » sur jusqu'à une autre créature ciblée.\nLes créatures non-Horreur avec des marqueurs « boue » sur elles perdent toutes leurs capacités et ont une force et une et endurance de base de 2/2.", "type": "Créature : horreur", "flavor": null, "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=538875&type=card", "language": "French", "identifiers": { "scryfallId": "7ae0c6ad-e055-429c-859a-b0141fe5ce1c", "multiverseId": 538875 }, "multiverseid": 538875 }, { "name": "Mostro della Fanghiglia", "text": "Ogniqualvolta il Mostro della Fanghiglia entra nel campo di battaglia o attacca, scegli fino a un'altra creatura bersaglio e metti un segnalino melma su di essa.\nLe creature non Orrore con segnalini melma perdono tutte le abilità e hanno forza e costituzione base 2/2.", "type": "Creatura — Orrore", "flavor": null, "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=538935&type=card", "language": "Italian", "identifiers": { "scryfallId": "9122a841-cd72-4ed8-95b1-494ccabfd76d", "multiverseId": 538935 }, "multiverseid": 538935 }, { "name": "ヘドロの怪物", "text": "ヘドロの怪物が戦場に出るか攻撃するたび、これでないクリーチャー最大１体を対象とする。それの上にスライム・カウンター１個を置く。\nスライム・カウンターが置かれていてホラーでないすべてのクリーチャーはすべての能力を失い基本のパワーとタフネスが２/２になる。", "type": "クリーチャー — ホラー", "flavor": null, "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=538995&type=card", "language": "Japanese", "identifiers": { "scryfallId": "c5758771-390d-4732-9c8f-8ac5c950a367", "multiverseId": 538995 }, "multiverseid": 538995 }], "printings": ["CLB", "DBL", "MID", "PMID", "PRM"], "legalities": [{ "format": "Brawl", "legality": "Legal" }, { "format": "Commander", "legality": "Legal" }, { "format": "Duel", "legality": "Legal" }, { "format": "Explorer", "legality": "Legal" }, { "format": "Future", "legality": "Legal" }, { "format": "Gladiator", "legality": "Legal" }, { "format": "Historic", "legality": "Legal" }, { "format": "Legacy", "legality": "Legal" }, { "format": "Modern", "legality": "Legal" }, { "format": "Oathbreaker", "legality": "Legal" }, { "format": "Penny", "legality": "Legal" }, { "format": "Pioneer", "legality": "Legal" }, { "format": "Standard", "legality": "Legal" }, { "format": "Standardbrawl", "legality": "Legal" }, { "format": "Timeless", "legality": "Legal" }, { "format": "Vintage", "legality": "Legal" }], "id": "ddcee35d-1104-58ea-b538-8b5026a5d57e" },
         { "name": "Lodestone Myr", "manaCost": "{4}", "cmc": 4, "type": "Artifact Creature — Myr", "types": ["Artifact", "Creature"], "subtypes": ["Myr"], "rarity": "Rare", "set": "MM2", "setName": "Modern Masters 2015", "text": "Trample\nTap an untapped artifact you control: Lodestone Myr gets +1/+1 until end of turn.", "flavor": "When necessary, myr can override and control any artificial object, as can their creator.", "artist": "Greg Staples", "number": "220", "power": "2", "toughness": "2", "layout": "normal", "multiverseid": "397769", "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=397769&type=card", "foreignNames": [{ "name": "磁石マイア", "text": "トランプル\nあなたがコントロールするアンタップ状態のアーティファクトを１つタップする：ターン終了時まで、磁石マイアは＋１/＋１の修整を受ける。", "type": "アーティファクト・クリーチャー — マイア", "flavor": "必要とあらば、マイアはあらゆる人工物を、自分の製作者のように操ることができる。", "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=398267&type=card", "language": "Japanese", "identifiers": { "scryfallId": "b7b52e94-b90c-45d8-bd84-6b777650412b", "multiverseId": 398267 }, "multiverseid": 398267 }, { "name": "磁石秘耳", "text": "践踏\n横置一个由你操控且未横置的神器：磁石秘耳得+1/+1直到回合结束。", "type": "神器生物～秘耳", "flavor": "有必要时，秘耳也能压制、操控任何人造物体，正如其创生者一般。", "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=398018&type=card", "language": "Chinese Simplified", "identifiers": { "scryfallId": "2b78b005-a940-4dc3-b410-0f89109fa021", "multiverseId": 398018 }, "multiverseid": 398018 }], "printings": ["HOP", "MM2", "MRD"], "originalText": "Trample\nTap an untapped artifact you control: Lodestone Myr gets +1/+1 until end of turn.", "originalType": "Artifact Creature — Myr", "legalities": [{ "format": "Commander", "legality": "Legal" }, { "format": "Duel", "legality": "Legal" }, { "format": "Legacy", "legality": "Legal" }, { "format": "Modern", "legality": "Legal" }, { "format": "Oathbreaker", "legality": "Legal" }, { "format": "Penny", "legality": "Legal" }, { "format": "Predh", "legality": "Legal" }, { "format": "Vintage", "legality": "Legal" }], "id": "68a15e39-f148-5799-bb3f-328d42adadc9" },
         { "name": "Relentless Rats", "manaCost": "{1}{B}{B}", "cmc": 3, "colors": ["B"], "colorIdentity": ["B"], "type": "Creature — Rat", "types": ["Creature"], "subtypes": ["Rat"], "rarity": "Uncommon", "set": "M10", "setName": "Magic 2010", "text": "Relentless Rats gets +1/+1 for each other creature on the battlefield named Relentless Rats.\nA deck can have any number of cards named Relentless Rats.", "artist": "Thomas M. Baxa", "number": "108", "power": "2", "toughness": "2", "layout": "normal", "multiverseid": "191336", "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=191336&type=card", "rulings": [{ "date": "2021-03-19", "text": "Because damage remains marked on a creature until the damage is removed as the turn ends, nonlethal damage dealt to one Relentless Rats may become lethal if another Relentless Rats leaves the battlefield during that turn." }, { "date": "2021-03-19", "text": "The last ability of Relentless Rats lets you ignore the \"four-of\" rule. It doesn't let you ignore format legality. For example, during a Time Spiral Remastered Limited event, you can't add Relentless Rats from your personal collection." }], "foreignNames": [{ "name": "Unbarmherzige Ratten", "text": "Die Unbarmherzigen Ratten erhalten +1/+1 für jede andere Kreatur namens Unbarmherzige Ratten im Spiel.\nEin Deck kann eine beliebige Anzahl an Karten namens Unbarmherzige Ratten enthalten.", "type": "Kreatur — Ratte", "flavor": null, "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=199663&type=card", "language": "German", "identifiers": { "scryfallId": "50b924f7-e124-4477-b448-7215ff1d99d8", "multiverseId": 199663 }, "multiverseid": 199663 }, { "name": "Ratas implacables", "text": "Las Ratas implacables obtienen +1/+1 por cada otra criatura en el campo de batalla llamada Ratas implacables.\nUn mazo puede tener cualquier cantidad de cartas llamadas Ratas implacables.", "type": "Criatura — Rata", "flavor": null, "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=200659&type=card", "language": "Spanish", "identifiers": { "scryfallId": "18d1b877-9959-4164-b496-ba4530bba940", "multiverseId": 200659 }, "multiverseid": 200659 }, { "name": "Rats implacables", "text": "Les Rats implacables gagnent +1/+1 pour chaque autre créature sur le champ de bataille appelée Rats Implacables.\nUn deck peut contenir n'importe quel nombre de cartes appelées Rats implacables.", "type": "Créature : rat", "flavor": null, "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=199414&type=card", "language": "French", "identifiers": { "scryfallId": "398cb0f1-ea61-4017-96f8-94ce62c48130", "multiverseId": 199414 }, "multiverseid": 199414 }, { "name": "Ratti Spietati", "text": "I Ratti Spietati prendono +1/+1 per ogni altra creatura sul campo di battaglia chiamata Ratti Spietati.\nUn mazzo può avere un qualsiasi numero di carte chiamate Ratti Spietati.", "type": "Creatura — Ratto", "flavor": null, "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=200410&type=card", "language": "Italian", "identifiers": { "scryfallId": "ae99bff7-b918-4606-9b22-7ee658e6e76b", "multiverseId": 200410 }, "multiverseid": 200410 }, { "name": "執拗なネズミ", "text": "執拗なネズミは、戦場にある他の「執拗なネズミ」という名前のクリーチャー１体につき＋１/＋１の修整を受ける。\nデッキには「執拗なネズミ」という名前のカードを何枚でも入れることができる。", "type": "クリーチャー — ネズミ", "flavor": null, "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=199912&type=card", "language": "Japanese", "identifiers": { "scryfallId": "85c4d9b4-165c-4fa5-8e8b-29cb06ca3cfa", "multiverseId": 199912 }, "multiverseid": 199912 }, { "name": "Ratos Implacáveis", "text": "Ratos Implacáveis recebe +1/+1 para cada outra criatura no campo de batalha com o nome Ratos Implacáveis.\nUm deck pode conter um número qualquer de cards com o nome de Ratos Implacáveis.", "type": "Criatura — Rato", "flavor": null, "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=199165&type=card", "language": "Portuguese (Brazil)", "identifiers": { "scryfallId": "cec16d55-c36b-4598-bc2e-380f051309c1", "multiverseId": 199165 }, "multiverseid": 199165 }, { "name": "Беспощадные Крысы", "text": "Беспощадные Крысы получают +1/+1 за каждое другое существо на поле битвы с именем Беспощадные Крысы.\nВ колоде может быть любое количество карт с именем Беспощадные Крысы.", "type": "Существо — Крыса", "flavor": null, "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=200161&type=card", "language": "Russian", "identifiers": { "scryfallId": "04c01aa8-9a30-4847-9711-1d5e72246851", "multiverseId": 200161 }, "multiverseid": 200161 }, { "name": "无情鼠群", "text": "战场上每有一个名称为无情鼠群的其他生物，无情鼠群便得+1/+1。\n名称为无情鼠群的牌，在套牌中之数量不受限制。", "type": "生物～老鼠", "flavor": null, "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=200908&type=card", "language": "Chinese Simplified", "identifiers": { "scryfallId": "73d1786e-bff4-46cf-b611-575e02c26ecd", "multiverseId": 200908 }, "multiverseid": 200908 }], "printings": ["10E", "5DN", "A25", "M10", "M11", "PLST", "PM11", "SLD", "SLP", "TSR"], "originalText": "Relentless Rats gets +1/+1 for each other creature on the battlefield named Relentless Rats.\nA deck can have any number of cards named Relentless Rats.", "originalType": "Creature — Rat", "legalities": [{ "format": "Commander", "legality": "Legal" }, { "format": "Duel", "legality": "Legal" }, { "format": "Legacy", "legality": "Legal" }, { "format": "Modern", "legality": "Legal" }, { "format": "Oathbreaker", "legality": "Legal" }, { "format": "Pauper", "legality": "Legal" }, { "format": "Paupercommander", "legality": "Legal" }, { "format": "Predh", "legality": "Legal" }, { "format": "Vintage", "legality": "Legal" }], "id": "cf893bbc-78a0-5e7c-b434-12cf929a2821" },
-
     ])
 
+    useEffect(() => {
+        fetch('/allCards')
+            .then(res => res.json())
+            .then(setCards)
+
+            // if (document.addEventListener) {
+            //     document.addEventListener('contextmenu', function(e) {
+            //       alert("You've tried to open context menu"); //here you draw your own menu
+            //       e.preventDefault();
+            //     }, false);
+            //   } else {
+            //     document.attachEvent('oncontextmenu', function() {
+            //       alert("You've tried to open context menu");
+            //       window.event.returnValue = false;
+            //     });
+            //   }
+    }, [])
+
     function dragstartHandler(ev) {
-        // Add the target element's id to the data transfer object
         ev.dataTransfer.setData("application/my-app", ev.target.id);
         ev.dataTransfer.effectAllowed = "move";
         console.log(ev)
@@ -22,9 +38,10 @@ export default function Workspace() {
 
     function dropHandler(ev) {
         ev.preventDefault();
-        // Get the id of the target and add the moved element to the target's DOM
         const data = ev.dataTransfer.getData("application/my-app");
         ev.target.appendChild(document.getElementById(data));
+        console.log(ev.target.scrollWidth, ev.target.scr)
+        ev.target.scrollLeft = ev.target.scrollWidth
     }
 
     function dragoverHandler(ev) {
@@ -32,10 +49,13 @@ export default function Workspace() {
         ev.dataTransfer.dropEffect = "move";
     }
 
-
-    const renderCards = cards.map(card => <img id={card.id} key={card.id + new Date()} onDragStart={dragstartHandler} draggable src={card.imageUrl}></img>)
-
-
+    const renderCards = cards?.map(card => <img id={card.id}
+        key={card.id + new Date()}
+        onDragStart={dragstartHandler}
+        draggable
+        src={card.image_url
+            || 'icons/ph.jpeg'
+        }></img>)
 
     return (<div className="d-flex flex-column workspace">
 
@@ -44,9 +64,16 @@ export default function Workspace() {
         </div>
 
         <hr />
-        
+
         <div className="myDeck d-flex gap-3" onDrop={dropHandler} onDragOver={dragoverHandler}>
         </div>
+        <div contextmenu="mymenu">
 
+            <menu type="context" id="mymenu">
+                <menuitem label="Refresh"></menuitem>
+                <menuitem label="Twitter"></menuitem>
+            </menu>
+
+        </div>
     </div>)
 }
