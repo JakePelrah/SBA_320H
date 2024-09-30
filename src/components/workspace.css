@@ -37,7 +37,6 @@
     background-color: var(--bg-color);
     overflow-x: scroll;
     transition: margin-left .35s ease ;
-    margin-bottom: -15px !important;
 }
 
 .myDeck::-webkit-scrollbar {

@@ -66,13 +66,5 @@ export default function Workspace() {
 
         <div className="myDeck d-flex" onDrop={dropHandler} onDragOver={dragoverHandler}>
         </div>
-        <div contextmenu="mymenu">
-
-            <menu type="context" id="mymenu">
-                <menuitem label="Refresh"></menuitem>
-                <menuitem label="Twitter"></menuitem>
-            </menu>
-
-        </div>
     </div>)
 }
