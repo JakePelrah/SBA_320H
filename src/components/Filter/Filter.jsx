@@ -3,33 +3,50 @@ import RangeSlider from "../RangeSlider/RangeSlider";
 import formats from './formats.json'
 import types from './types.json'
 import subtypes from './subtypes.json'
-import supertypes from './supertypes.json'
 import { useMTG } from "../MTGProvider";
 
 export default function Filter() {
-const {cards, getCards} = useMTG()
-
-console.log(cards)
-
-    const [colors, setColors] = useState({
-        black: false, red: false,
-        green: false, blue: false, white: false, colorless: false
-    })
-
-    const [data, setData] = useState({ types, subtypes, supertypes, formats })
+    const { cards, getCards } = useMTG()
+    const [colors, setColors] = useState([])
+    const [selTypes, setSelTypes] = useState({ type: [], subtype: [], supertype: [] })
 
 
-    useEffect(()=>{
-        getCards(colors)
-    },[colors])
+    const [data, setData] = useState({ types, subtypes, formats })
+
+
+    useEffect(() => {
+        getCards(colors, selTypes)
+    }, [colors, selTypes])
 
     function onChangeCheckbox(e) {
-        console.log(e.target.checked)
-        setColors({ ...colors, [e.target.id]: e.target.checked })
+        const checked = e.target.checked
+        const color = e.target.id
+
+        if (checked && !colors.includes(color)) {
+            setColors([...colors, color])
+        }
+        else {
+            setColors(colors.filter(c => c !== color))
+        }
     }
 
 
-    const renderColors = ['black', 'red', 'green', 'blue', 'white', 'colorless'].map(color =>
+    function onChangeType(e) {
+        const checked = e.target.checked
+        const checkedType = e.target.id
+        const property = e.target.dataset['property']
+
+
+        if (checked) {
+            setSelTypes({ ...selTypes, [property]: [...selTypes[property], checkedType] })
+        }
+        else {
+            setSelTypes({...selTypes, [property]:selTypes[property]?.filter(t => t !== checkedType) || []})
+        }
+    }
+
+
+    const renderColors = ['B', 'R', 'G', 'U', 'W', 'C'].map(color =>
         <div key={color} className="d-flex flex-column align-items-center">
             <img className="mana-icon mb-1" src={`icons/${color}.svg`} />
             <input onChange={onChangeCheckbox} className="form-check-input color-checkbox" type="checkbox" value={color[color]} id={color} />
@@ -37,9 +54,9 @@ console.log(cards)
     )
 
 
-    const renderTypes = (data) => data.map(item =>
+    const renderTypes = (data, property) => data.map(item =>
         <div key={item} className="form-check">
-            <input className="form-check-input type-checkbox" type="checkbox" value={item} id="flexCheckDefault" />
+            <input data-property={property} onChange={onChangeType} className="form-check-input type-checkbox" type="checkbox" value={item[item]} id={item} />
             <label className="form-check-label" htmlFor="flexCheckDefault">
                 {item}
             </label>
@@ -62,7 +79,7 @@ console.log(cards)
                 </h2>
                 <div id="collapseOne" className="accordion-collapse collapse">
                     <div className="accordion-body">
-                        {renderTypes(data.types)}
+                        {renderTypes(data.types, 'type')}
                     </div>
                 </div>
             </div>
@@ -75,23 +92,11 @@ console.log(cards)
                 </h2>
                 <div id="collapseTwo" className="accordion-collapse collapse">
                     <div className="accordion-body">
-                        {renderTypes(data.subtypes)}
+                        {renderTypes(data.subtypes, 'subtype')}
                     </div>
                 </div>
             </div>
 
-            <div className="accordion-item mb-2">
-                <h2 className="accordion-header">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Supertypes
-                    </button>
-                </h2>
-                <div id="collapseThree" className="accordion-collapse collapse">
-                    <div className="accordion-body">
-                        {renderTypes(data.supertypes)}
-                    </div>
-                </div>
-            </div>
 
             <div className="accordion-item">
                 <h2 className="accordion-header">

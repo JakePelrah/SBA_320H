@@ -10,17 +10,17 @@ export default function Sidebar() {
         const oc = new bootstrap.Offcanvas(myOffcanvas)
         oc.show()
 
-        document.querySelector('.cards').classList.add('open')
-        document.querySelector('.myDeck').classList.add('open')
+        document.querySelector('#cards').classList.add('open')
+        document.querySelector('#myDeck').classList.add('open')
 
         myOffcanvas.addEventListener('hide.bs.offcanvas', event => {
-            document.querySelector('.cards').classList.remove('open')
-            document.querySelector('.myDeck').classList.remove('open')
+            document.querySelector('#cards').classList.remove('open')
+            document.querySelector('#myDeck').classList.remove('open')
         })
 
         myOffcanvas.addEventListener('show.bs.offcanvas', event=>{
-            document.querySelector('.cards').classList.add('open')
-            document.querySelector('.myDeck').classList.add('open')
+            document.querySelector('#cards').classList.add('open')
+            document.querySelector('#myDeck').classList.add('open')
         })
     }
         , [])

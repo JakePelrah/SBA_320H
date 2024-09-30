@@ -5,56 +5,61 @@
     width: 100vw;
 }
 
-.cards {
+#cards {
     height: 50vh;
     background-color: var(--secondary-color);
     overflow-x: scroll;
     transition: margin-left .35s ease ;
 }
 
-.cards::-webkit-scrollbar {
+#cards::-webkit-scrollbar {
     background-color: var(--secondary-color);
 }
 
-.cards::-webkit-scrollbar-thumb {
+#cards::-webkit-scrollbar-thumb {
     background-color: var(--navbar-color);
     border-radius: 1px;
 }
 
-.cards.open{
+#cards.open{
     margin-left: 18em;
 }
 
-.cards>img {
+#cards>img {
     background-color: transparent;
     border: 1em solid transparent;
     border-radius: 1.7em;
 }
 
-.myDeck {
+#myDeck {
     height: 50vh;
     background-color: var(--bg-color);
     overflow-x: scroll;
     transition: margin-left .35s ease ;
+
 }
 
-.myDeck::-webkit-scrollbar {
+#myDeck::-webkit-scrollbar {
     background-color: var(--bg-color);
 }
 
-.myDeck::-webkit-scrollbar-thumb {
+#myDeck::-webkit-scrollbar-thumb {
     background-color: var(--navbar-color);
     border-radius: 1px;
 }
 
-.myDeck.open{
+#myDeck.open{
     margin-left: 18em;
 }
 
 
-.myDeck>img {
+#myDeck>img {
     background-color: transparent;
     border: 1em solid transparent;
     border-radius: 1.7em;
-    pointer-events: none;
+}
+
+
+#context-menu{
+    position: absolute;
 }

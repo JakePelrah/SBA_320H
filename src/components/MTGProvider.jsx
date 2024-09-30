@@ -8,10 +8,11 @@ export default function MTGProvider({ children }) {
     const [cards, setCards] = useState([])
 
 
-    function getCards(colors) {
+    function getCards(colors, type) {
+        console.log(colors)
         fetch('cardQuery', {
             method: 'POST',
-            body: JSON.stringify(colors),
+            body: JSON.stringify({colors, type}),
             headers: {
                 "Content-Type": "application/json",
             },

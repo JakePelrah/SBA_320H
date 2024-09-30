@@ -1,28 +1,24 @@
 import { useEffect, useState } from "react"
 import { useMTG } from "./MTGProvider";
+import ContextMenu from './ContextMenu'
+
 import './workspace.css'
 export default function Workspace() {
     const { cards } = useMTG()
 
-    console.log(cards)
 
-    // useEffect(() => {
-    //     fetch('/allCards')
-    //         .then(res => res.json())
-    //         .then(setCards)
+    useEffect(() => {
 
-    //     // if (document.addEventListener) {
-    //     //     document.addEventListener('contextmenu', function(e) {
-    //     //       alert("You've tried to open context menu"); //here you draw your own menu
-    //     //       e.preventDefault();
-    //     //     }, false);
-    //     //   } else {
-    //     //     document.attachEvent('oncontextmenu', function() {
-    //     //       alert("You've tried to open context menu");
-    //     //       window.event.returnValue = false;
-    //     //     });
-    //     //   }
-    // }, [])
+
+        // document.addEventListener('contextmenu', function (e) {
+        //     const { id } = e.target
+        //     // alert("You've tried to open context menu"); //here you draw your own menu
+        //     console.log('context', id)
+        //     e.preventDefault();
+
+        // }, false);
+
+    }, [])
 
     function dragstartHandler(ev) {
         ev.dataTransfer.setData("application/my-app", ev.target.id);
@@ -52,12 +48,13 @@ export default function Workspace() {
 
     return (<div className="d-flex flex-column workspace">
 
-        <div className="cards d-flex">
+        <div id="cards" className="d-flex">
             {renderCards}
         </div>
 
 
-        <div className="myDeck d-flex" onDrop={dropHandler} onDragOver={dragoverHandler}>
+        <div id="myDeck" className="d-flex" onDrop={dropHandler} onDragOver={dragoverHandler}>
         </div>
+        {/* <ContextMenu/> */}
     </div>)
 }
