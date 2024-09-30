@@ -10,9 +10,11 @@
     --secondary-color: #454545;
 }
 
-body {
+
+body{
     background-color: var(--bg-color);
 }
+
 
 .navbar {
     border-bottom: 1px solid rgb(48, 48, 48);
@@ -93,11 +95,11 @@ input::placeholder {
     color: #ffffff !important;
 }
 
-.dropdown-item:focus{
-background-color: #a7a7a7;
+.dropdown-item:focus {
+    background-color: #a7a7a7;
 }
 
-.accordion-collapse{
+.accordion-collapse {
     max-height: 10em;
     overflow-y: scroll;
     scrollbar-color: var(--bg-color) var(--secondary-color);
@@ -115,11 +117,12 @@ background-color: #a7a7a7;
     background-color: var(--secondary-color);
     cursor: pointer;
 }
+
 .color-checkbox:checked {
     background-color: #F24333;
 }
 
-.type-checkbox{
+.type-checkbox {
     font-size: 1.2em;
     border-radius: 2em !important;
     border: none;
@@ -128,11 +131,11 @@ background-color: #a7a7a7;
     cursor: pointer;
 }
 
-.type-checkbox:checked{
+.type-checkbox:checked {
     background-color: #F24333;
 }
 
-.tab{
+.tab {
     background-color: red;
     height: 2em;
     width: 2em;
@@ -141,50 +144,68 @@ background-color: #a7a7a7;
     cursor: pointer;
 }
 
-.tab:hover{
+.tab:hover {
     background-color: #454545;
 }
 
-footer{
+footer {
     width: 100%;
-    position:absolute;
+    position: absolute;
     bottom: 0;
     padding: 0;
     margin: 0;
 }
 
-.footer-btn img{
+.footer-btn img {
     width: 2em;
     height: 2em;
 }
 
-.btn{
+.btn {
     border: none;
 }
 
 
-.workspace{
-    background-color: #ffffff;
+.workspace {
+    background-color: var(--secondary-color);
     height: 80vh;
     width: 100vw;
 }
 
-.cards{
+.cards {
     height: 50vh;
     background-color: var(--secondary-color);
     overflow-x: scroll;
     scrollbar-color: var(--bg-color) var(--secondary-color);
+    transition: margin-left .35s ease ;
 }
 
-.cards > img{
+.cards.open{
+    margin-left: 18em;
+}
+
+.cards>img {
     background-color: transparent;
     border: 1em solid transparent;
     border-radius: 1.7em;
 }
 
-.binder{
+.myDeck {
     height: 50vh;
     background-color: var(--secondary-color);
     overflow-x: scroll;
     scrollbar-color: var(--bg-color) var(--secondary-color);
+    transition: margin-left .35s ease ;
 }
+
+.myDeck.open{
+    margin-left: 18em;
+}
+
+
+.myDeck>img {
+    background-color: transparent;
+    border: 1em solid transparent;
+    border-radius: 1.7em;
+}
+
