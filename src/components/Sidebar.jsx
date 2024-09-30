@@ -1,12 +1,6 @@
-import { useEffect } from "react"
 import Filter from "./Filter"
 
 export default function Sidebar() {
-
-    useEffect(() => {
-        new bootstrap.Offcanvas('#offcanvasScrolling').show()
-    }, [])
-
     return (
         <div className="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabIndex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
 

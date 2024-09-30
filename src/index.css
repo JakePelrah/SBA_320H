@@ -32,13 +32,13 @@ body {
 .offcanvas {
     background-color: var(--bg-color);
     color: var(--navbar-color);
-    width: 22em !important;
+    width: 18em !important;
     border: none !important;
     box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .offcanvas-body {
-    width: 22em !important;
+    width: 18em !important;
     overflow-y: scroll;
     border-top: none;
 }
@@ -160,4 +160,31 @@ footer{
 
 .btn{
     border: none;
+}
+
+
+.workspace{
+    background-color: #ffffff;
+    height: 80vh;
+    width: 100vw;
+}
+
+.cards{
+    height: 50vh;
+    background-color: var(--secondary-color);
+    overflow-x: scroll;
+    scrollbar-color: var(--bg-color) var(--secondary-color);
+}
+
+.cards > img{
+    background-color: transparent;
+    border: 1em solid transparent;
+    border-radius: 1.7em;
+}
+
+.binder{
+    height: 50vh;
+    background-color: var(--secondary-color);
+    overflow-x: scroll;
+    scrollbar-color: var(--bg-color) var(--secondary-color);
 }

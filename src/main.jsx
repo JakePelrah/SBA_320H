@@ -5,6 +5,8 @@ import {
 } from "react-router-dom";
 import ErrorPage from './components/ErrorPage.jsx';
 import Layout from './components/Layout.jsx';
+import Binder from './components/Binder.jsx';
+import Workspace from './components/Workspace.jsx';
 import './index.css'
 
 
@@ -17,7 +19,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <div>HERE</div>,
+        element: <Workspace/>
+      },
+      {
+        path:'binder',
+        element:<Binder/>
       }
     ]
   },
