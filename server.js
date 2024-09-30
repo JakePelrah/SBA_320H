@@ -2,24 +2,7 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import express from 'express';
-import pg from "pg";
-import dotEnv from "dotenv";
-dotEnv.config();
-
-const { Pool } = pg;
-
-export const pool = new Pool({
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  database: process.env.DB_NAME,
-  ssl: {
-    rejectUnauthorized: false, // Only use this if you trust the server
-  },
-});
-
-export const query = (text, params) => pool.query(text, params)
+import query from './db.js';
 
 // Get the directory name of the current module
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -37,6 +20,10 @@ app.get('/allCards', async (req, res) => {
   const {rows} =  await query('SELECT * FROM cards LIMIT 1000')
   console.log(rows)
   res.json(rows)
+})
+
+app.post('/cardQuery', async (req, res)=>{
+  console.log(req.body)
 })
 
 // Handle client-side routing, returning all requests to the app
