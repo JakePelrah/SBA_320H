@@ -12,7 +12,6 @@
 
 body {
     background-color: var(--bg-color);
-    color: var(--navbar-color);
 }
 
 .navbar {
@@ -70,8 +69,6 @@ body {
     height: 2em;
 }
 
-
-
 .accordion-body {
     border-top: 2px solid var(--bg-color);
     background-color: var(--secondary-color) !important;
@@ -79,10 +76,9 @@ body {
 
 .accordion-item {
     background-color: var(--secondary-color);
-    color: var(--navbar-color);
+    color: white;
     border-radius: .2em !important;
     border: none;
-
 }
 
 .accordion-button {
@@ -93,12 +89,9 @@ body {
     box-shadow: none !important;
 }
 
-
-
 input::placeholder {
     color: #ffffff !important;
 }
-
 
 .dropdown-item:focus{
 background-color: #a7a7a7;
@@ -137,4 +130,34 @@ background-color: #a7a7a7;
 
 .type-checkbox:checked{
     background-color: #F24333;
+}
+
+.tab{
+    background-color: red;
+    height: 2em;
+    width: 2em;
+    position: relative;
+    left: 95%;
+    cursor: pointer;
+}
+
+.tab:hover{
+    background-color: #454545;
+}
+
+footer{
+    width: 100%;
+    position:absolute;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-btn img{
+    width: 2em;
+    height: 2em;
+}
+
+.btn{
+    border: none;
 }

@@ -22,10 +22,8 @@ export default function RangeSlider({ id, min, max }) {
 
     }, [])
 
-
-
     return (<>
-        <label className="my-4 fw-bold">{id}</label>
+        <label className="mt-4 mb-1 fw-bold">{id}</label>
         <div ref={sliderRef} id={`${id}-slider`}></div>
     </>
     )

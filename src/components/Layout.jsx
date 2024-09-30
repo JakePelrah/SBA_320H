@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 
 import NavBar from "./Navbar"
 import Sidebar from "./Sidebar"
+import Footer from "./Footer";
 
 export default function Layout() {
 
@@ -10,5 +11,6 @@ export default function Layout() {
         <NavBar />
         <Sidebar />
         <Outlet />
+        <Footer/>
     </div>)
 }
