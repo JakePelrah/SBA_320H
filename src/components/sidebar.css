@@ -1,0 +1,107 @@
+.offcanvas {
+    background-color: var(--bg-color);
+    color: var(--navbar-color);
+    width: 18em !important;
+    border: none !important;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.offcanvas-body {
+    width: 18em !important;
+    overflow-y: scroll;
+    border-top: none;
+}
+
+.offcanvas-body::-webkit-scrollbar {
+    width: .75em;
+    background: var(--bg-color);
+}
+
+.offcanvas-body::-webkit-scrollbar-thumb {
+    background-color: var(--navbar-color);
+    border-radius: 2px;
+}
+
+.offcanvas-body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--navbar-hover-color);
+}
+
+.offcanvas-header>.navbar-brand {
+    margin-left: -.15em;
+    top: -15px;
+    ;
+    position: relative;
+}
+
+.navbar-brand {
+    font-family: MTG;
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--navbar-color);
+}
+
+.navbar-brand:hover {
+    color: var(--navbar-color);
+}
+
+.mana-icon {
+    width: 2em;
+    height: 2em;
+}
+
+
+.accordion-body {
+    border-top: 2px solid var(--bg-color);
+    background-color: var(--secondary-color) !important;
+}
+
+.accordion-item {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: .2em !important;
+    border: none;
+}
+
+.accordion-button {
+    border-radius: .2em !important;
+    background-color: var(--secondary-color) !important;
+    color: var(--navbar-color) !important;
+    font-weight: bold;
+    box-shadow: none !important;
+}
+
+.accordion-collapse {
+    max-height: 10em;
+    overflow-y: scroll;
+    scrollbar-color: var(--bg-color) var(--secondary-color);
+}
+
+
+
+/* Checkboxes */
+
+.color-checkbox {
+    font-size: 1.2em;
+    border-radius: 2em !important;
+    border: none;
+    box-shadow: none !important;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.color-checkbox:checked {
+    background-color: #F24333;
+}
+
+.type-checkbox {
+    font-size: 1.2em;
+    border-radius: 2em !important;
+    border: none;
+    box-shadow: none !important;
+    background-color: var(--bg-color);
+    cursor: pointer;
+}
+
+.type-checkbox:checked {
+    background-color: #F24333;
+}

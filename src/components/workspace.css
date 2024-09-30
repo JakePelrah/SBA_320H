@@ -1,0 +1,65 @@
+
+.workspace {
+    background-color: var(--secondary-color);
+    height: 94vh;
+    width: 100vw;
+}
+
+.cards {
+    height: 50vh;
+    background-color: var(--secondary-color);
+    overflow-x: scroll;
+    transition: margin-left .35s ease ;
+}
+
+.cards::-webkit-scrollbar {
+    height: 20px !important; /* Adjust width as needed */
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid black;
+}
+
+.cards::-webkit-scrollbar-thumb {
+    background-color: var(--bg-color);
+    border-radius: 1px;
+}
+
+.cards.open{
+    margin-left: 18em;
+}
+
+.cards>img {
+    background-color: transparent;
+    border: 1em solid transparent;
+    border-radius: 1.7em;
+}
+
+
+.myDeck {
+    height: 50vh;
+    background-color: var(--secondary-color);
+    overflow-x: scroll;
+    transition: margin-left .35s ease ;
+}
+
+.myDeck::-webkit-scrollbar {
+    height: 20px !important; /* Adjust width as needed */
+    background-color: var(--secondary-color);
+}
+
+.myDeck::-webkit-scrollbar-thumb {
+    background-color: var(--bg-color);
+    border-radius: 1px;
+}
+
+
+.myDeck.open{
+    margin-left: 18em;
+}
+
+
+.myDeck>img {
+    background-color: transparent;
+    border: 1em solid transparent;
+    border-radius: 1.7em;
+    pointer-events: none;
+}
