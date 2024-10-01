@@ -8,15 +8,16 @@ import { useMTG } from "../MTGProvider";
 export default function Filter() {
     const { cards, getCards } = useMTG()
     const [colors, setColors] = useState([])
-    const [selTypes, setSelTypes] = useState({ type: [], subtype: [], supertype: [] })
+    const [selTypes, setSelTypes] = useState({ type: [], subtype: [], supertype: [], format: [] })
+    const [sliderValues, setSliderValues] = useState({ cmc: [0, 16], power: [0, 20], toughness: [0, 20] })
 
 
     const [data, setData] = useState({ types, subtypes, formats })
 
 
     useEffect(() => {
-        getCards(colors, selTypes)
-    }, [colors, selTypes])
+        getCards(colors, selTypes, sliderValues)
+    }, [colors, selTypes, sliderValues])
 
     function onChangeCheckbox(e) {
         const checked = e.target.checked
@@ -41,7 +42,7 @@ export default function Filter() {
             setSelTypes({ ...selTypes, [property]: [...selTypes[property], checkedType] })
         }
         else {
-            setSelTypes({...selTypes, [property]:selTypes[property]?.filter(t => t !== checkedType) || []})
+            setSelTypes({ ...selTypes, [property]: selTypes[property]?.filter(t => t !== checkedType) || [] })
         }
     }
 
@@ -106,7 +107,7 @@ export default function Filter() {
                 </h2>
                 <div id="collapseFour" className="accordion-collapse collapse">
                     <div className="accordion-body">
-                        {renderTypes(data.formats)}
+                        {renderTypes(data.formats, 'format')}
                     </div>
                 </div>
             </div>
@@ -114,10 +115,11 @@ export default function Filter() {
         </div>
 
 
-        <RangeSlider id="CMC" min={0} max={16} />
-        <RangeSlider id="Power" min={0} max={20} />
-        <RangeSlider id="Toughness" min={0} max={20} />
-
+        <div className="mt-3">
+            <RangeSlider id="cmc" min={0} max={16} setSliderValues={setSliderValues} />
+            <RangeSlider id="power" min={0} max={20} setSliderValues={setSliderValues} />
+            <RangeSlider id="toughness" min={0} max={20} setSliderValues={setSliderValues} />
+        </div>
 
     </div>)
 }

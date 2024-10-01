@@ -6,7 +6,6 @@ export default function Workspace() {
     const { cards } = useMTG()
 
     function dragstartHandler(ev) {
-        console.log(ev)
         ev.dataTransfer.setData("application/my-app", ev.target.id);
         ev.dataTransfer.effectAllowed = "copy";
         console.log(ev)
@@ -17,6 +16,7 @@ export default function Workspace() {
         const data = ev.dataTransfer.getData("application/my-app");
         const cloned = document.getElementById(data).cloneNode(true)
         cloned.draggable = false
+        cloned.style.pointerEvents = "none"
         ev.target.appendChild(cloned);
         ev.target.scrollLeft = ev.target.scrollWidth
     }
@@ -25,6 +25,7 @@ export default function Workspace() {
         ev.preventDefault();
         ev.dataTransfer.dropEffect = "copy";
     }
+
 
     const renderCards = cards?.map(card =>
         <div className="myDeck-card"

@@ -3,9 +3,8 @@ import noUiSlider from 'nouislider'
 import 'nouislider/dist/nouislider.css';
 import './rangeSlider.css'
 
-export default function RangeSlider({ id, min, max }) {
+export default function RangeSlider({ id, min, max, setSliderValues }) {
     const sliderRef = useRef(null)
-    const [value, setValue] = useState([0, 16])
 
     useEffect(() => {
         const slider = noUiSlider.create(sliderRef.current, {
@@ -18,13 +17,17 @@ export default function RangeSlider({ id, min, max }) {
                 max
             }
         })
-        slider.on('slide', (valArray) => setValue(valArray.map(val => parseInt(val))))
+        slider.on('set', (valArray) => {
+            setSliderValues(prevState=>({...prevState, [id]:valArray.map(val => parseInt(val)) }))
+            }
+       
+    )
 
     }, [])
 
     return (<>
-        <label className="mt-4 mb-1 fw-bold">{id}</label>
-        <div ref={sliderRef} id={`${id}-slider`}></div>
+        <label className="mt-4 mb-1 fw-bold">{id.toUpperCase()}</label>
+        <div className="mb-3" ref={sliderRef} id={`${id}-slider`}></div>
     </>
     )
 }

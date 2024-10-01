@@ -1404,11 +1404,11 @@ export default function MTGProvider({ children }) {
     ])
 
 
-    function getCards(colors, type) {
+    function getCards(colors, type, sliderValues) {
         console.log(colors)
         fetch('cardQuery', {
             method: 'POST',
-            body: JSON.stringify({colors, type}),
+            body: JSON.stringify({colors, type, sliderValues}),
             headers: {
                 "Content-Type": "application/json",
             },

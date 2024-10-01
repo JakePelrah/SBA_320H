@@ -17,15 +17,20 @@ app.use(express.static(path.join(__dirname, 'dist'))); // Serve static files fro
 
 
 app.post('/cardQuery', async (req, res) => {
-  const { colors, type } = req.body
+  const { colors, type, sliderValues } = req.body
   const { type: typeArray, subtype: subtypeArray } = type;
+  const { cmc, power, toughness } = sliderValues
+  console.log(cmc, power, toughness)
 
   const { rows } = await query(`SELECT * FROM cards 
    WHERE colors @> ARRAY[$1::varchar[]] 
    AND types @> ARRAY[$2::varchar[]] 
    AND subtypes @> ARRAY[$3::varchar[]] 
-   LIMIT 100`, [colors, typeArray, subtypeArray]);
-  console.log(rows.length)
+   AND cmc BETWEEN $4 AND $5
+   AND power BETWEEN $6 AND $7
+   AND toughness BETWEEN $8 AND $9
+
+   LIMIT 100`, [colors, typeArray, subtypeArray, cmc[0], cmc[1], power[0], power[1], toughness[0], toughness[1]]);
   res.json(rows)
 })
 
