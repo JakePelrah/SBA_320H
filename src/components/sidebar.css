@@ -20,6 +20,7 @@
 .offcanvas-body::-webkit-scrollbar-thumb {
     background-color: var(--navbar-color);
     border-radius: 2px;
+   
 }
 
 .offcanvas-body::-webkit-scrollbar-thumb:hover {

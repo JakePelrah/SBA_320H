@@ -9,6 +9,7 @@
     background-color: var(--secondary-color);
     overflow-x: scroll;
     transition: margin-left .35s ease;
+    border-left: 1em solid var(--bg-color);
 }
 
 #cards::-webkit-scrollbar {
@@ -17,8 +18,14 @@
 
 #cards::-webkit-scrollbar-thumb {
     background-color: var(--navbar-color);
-    border-radius: 1px;
+    border-radius: 1em;
 }
+
+#cards::-webkit-scrollbar-thumb:hover {
+    background-color: var(--navbar-hover-color);
+    border-radius: 1em;
+}
+
 
 #cards.open {
     margin-left: 18em;
@@ -38,6 +45,7 @@
     background-color: var(--bg-color);
     overflow-x: scroll;
     transition: margin-left .35s ease;
+    border-left: 1em solid var(--bg-color);
 }
 
 #myDeck::-webkit-scrollbar {
@@ -46,7 +54,7 @@
 
 #myDeck::-webkit-scrollbar-thumb {
     background-color: var(--navbar-color);
-    border-radius: 1px;
+    border-radius: 1em;
 }
 
 #myDeck.open {
