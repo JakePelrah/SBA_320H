@@ -9,7 +9,6 @@
     cursor: grab;
 }
 
-
 #cards, #myDeck {
     height: 50vh;
     background-color: var(--secondary-color);
@@ -33,7 +32,6 @@
     border-radius: 1em;
 }
 
-
 #cards.open {
     margin-left: 18em;
 }
@@ -53,7 +51,6 @@
     border: 1em solid var(--secondary-color);
     height: 100%;
 }
-
 
 .hr{
     border: none;
