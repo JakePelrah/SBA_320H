@@ -19,7 +19,7 @@
 .offcanvas-body::-webkit-scrollbar-thumb {
     background-color: var(--navbar-color);
     border-radius: 2px;
-   
+
 }
 
 .offcanvas-body::-webkit-scrollbar-thumb:hover {
@@ -80,7 +80,8 @@
 
 /* Checkboxes */
 
-.color-checkbox {
+.color-checkbox,
+.type-checkbox {
     font-size: 1.2em;
     border-radius: 2em !important;
     border: none;
@@ -89,19 +90,11 @@
     cursor: pointer;
 }
 
-.color-checkbox:checked {
-    background-color: #F24333;
-}
-
 .type-checkbox {
-    font-size: 1.2em;
-    border-radius: 2em !important;
-    border: none;
-    box-shadow: none !important;
     background-color: var(--bg-color);
-    cursor: pointer;
 }
 
+.color-checkbox:checked,
 .type-checkbox:checked {
-    background-color: #F24333;
+    background-color: var(--navbar-color);
 }
