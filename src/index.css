@@ -1,6 +1,6 @@
 @font-face {
     font-family: MTG;
-    src: url('../public/fonts/Roboto/Roboto-Regular.ttf'), format('ttf');
+    src: url('../public/fonts/Roboto/Roboto-Bold.ttf'), format('ttf');
 }
 
 :root {
