@@ -1,6 +1,6 @@
 @font-face {
     font-family: MTG;
-    src: url('fonts/goudy-medieval/Goudy\ Medieval\ Alternate.ttf') format('.ttf');
+    src: url('fonts/goudy-medieval/Goudy Mediaeval DemiBold.ttf'), format('ttf');
 }
 
 :root {
