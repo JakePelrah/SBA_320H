@@ -18,7 +18,7 @@ export default function RangeSlider({ id, min, max, setSliderValues }) {
             }
         })
         slider.on('set', (valArray) => {
-            setSliderValues(prevState=>({...prevState, [id]:valArray.map(val => parseInt(val)) }))
+            setSliderValues(prevState=>({...prevState, [id]:valArray.map(val => parseInt(val)).sort((a,b)=>a-b) }))
             }
        
     )

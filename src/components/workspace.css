@@ -60,11 +60,11 @@
     border-radius: 1.7em;
     border: 1em solid var(--bg-color);
     height: 100%;
-
 }
 
 .myDeck-card {
     position: relative;
+    cursor: grab;
 }
 
 .myDeck-card>.menu {
