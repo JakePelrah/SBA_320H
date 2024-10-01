@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 import { useMTG } from "./MTGProvider";
 
 import './workspace.css'
@@ -33,11 +32,6 @@ export default function Workspace() {
             id={card.id}
             onDragStart={dragstartHandler}
             draggable>
-
-            <div className="menu d-flex justify-content-center gap-2 align-items-start">
-                <button className="btn delete-btn mt-5"><img src="/icons/trash3-fill.svg"></img></button>
-                <button className="btn info-btn mt-5" ><img src="/icons/info-square-fill.svg"></img></button>
-            </div>
             <img
                 src={card.image_url
                     || 'icons/ph.jpeg'
@@ -52,7 +46,8 @@ export default function Workspace() {
             {renderCards}
         </div>
 
-
+        <div className="hr d-flex justify-content-center align-items-center">
+        </div>
         <div id="myDeck" className="d-flex" onDrop={dropHandler} onDragOver={dragoverHandler}>
         </div>
     </div>)
