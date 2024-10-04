@@ -19,12 +19,12 @@ export default function Card({ cardData, bisInDeck = false, removeFromDeck }) {
             draggable={!bisInDeck}>
             {showMenu
                 ? <div className="card-overlay d-flex justify-content-center align-items-center gap-2">
-                    {bisInDeck ? <div onClick={()=>removeFromDeck(cardData.uuid)} ><img src="icons/trash3-fill.svg"></img></div> : null}
+                    {bisInDeck ? <div onClick={()=>removeFromDeck(cardData.uuid)} ><img className="trash" src="icons/trash3-fill.svg"></img></div> : null}
                 </div>
                 : null
             }
 
-            <img
+            <img className="card-image"
                 src={image_url
                     || 'icons/ph.jpeg'
                 }></img>

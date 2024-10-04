@@ -45,17 +45,24 @@
     margin-left: 18em;
 }
 
-#cards img {
+#cards .card-image {
     pointer-events: none;
     border-radius: 1.7em;
     border: 1em solid var(--secondary-color);
     height: 100%;
 }
 
-#myDeck img {
+#myDeck .card-image {
     border-radius: 1.7em;
     border: 1em solid var(--secondary-color);
     height: 100%;
+}
+
+.trash{
+    width: 4em !important;
+    height: 4em !important;
+    cursor: pointer;
+
 }
 
 .workspace-divider{
