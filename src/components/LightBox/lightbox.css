@@ -1,0 +1,19 @@
+.modal img {
+    width: 100%;
+    border-radius: 2.4em;
+    border: 1em solid var(--bg-color);
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+    color: var(--navbar-color);
+    font-family: MTG;
+}
+
+.modal-title{
+    font-size: 2em;
+}
+
+.modal-header, .modal-footer{
+    border: none;
+}

@@ -5,6 +5,7 @@ const MTGContext = createContext()
 export const useMTG = () => useContext(MTGContext)
 
 export default function MTGProvider({ children }) {
+    const [detailedView, setDetailedView] = useState({})
     const [myDeck, setMyDeck] = useState([])
     const [cards, setCards] = useState([
         {
@@ -141,6 +142,7 @@ export default function MTGProvider({ children }) {
         }
     ])
 
+  
     function addToDeck(card) {
         card.uuid = uuidv4()
         setMyDeck(prevState => [...prevState, card])
@@ -169,7 +171,8 @@ export default function MTGProvider({ children }) {
 
     return (
         <MTGContext.Provider value={{
-            cards, getCards, addToDeck, removeFromDeck, myDeck
+            cards, getCards, addToDeck, removeFromDeck, myDeck, 
+            setDetailedView, detailedView
         }}>
             {children}
         </MTGContext.Provider>

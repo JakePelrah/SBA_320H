@@ -18,12 +18,11 @@ export default function Sidebar() {
             document.querySelector('#myDeck').classList.remove('open')
         })
 
-        myOffcanvas.addEventListener('show.bs.offcanvas', event=>{
+        myOffcanvas.addEventListener('show.bs.offcanvas', event => {
             document.querySelector('#cards').classList.add('open')
             document.querySelector('#myDeck').classList.add('open')
         })
-    }
-        , [])
+    }, [])
 
 
     return (
