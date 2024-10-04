@@ -1,13 +1,9 @@
-
-
 .modal img {
     width: 100%;
     border-radius: 2.4em;
     border: 1em solid var(--bg-color);
     pointer-events: none;
 }
-
-
 
 .modal-content {
     background-color: var(--bg-color);
