@@ -1,8 +1,7 @@
 import { Outlet } from "react-router-dom";
 
-import NavBar from "./Navbar"
-import Sidebar from "./Sidebar"
-import Footer from "./Footer";
+import Sidebar from "./Sidebar/Sidebar.jsx"
+import Footer from "./Workspace/Footer.jsx";
 import { useEffect } from "react";
 
 export default function Layout() {
@@ -13,7 +12,6 @@ export default function Layout() {
     }, [])
 
     return (<div>
-        {/* <NavBar /> */}
         <Sidebar />
         <Outlet />
         <Footer />

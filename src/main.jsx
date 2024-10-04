@@ -5,11 +5,9 @@ import {
 } from "react-router-dom";
 import ErrorPage from './components/ErrorPage.jsx';
 import Layout from './components/Layout.jsx';
-import Binder from './components/Binder.jsx';
-import Workspace from './components/Workspace.jsx';
-import './index.css'
+import Workspace from './components/Workspace/Workspace.jsx';
 import MTGProvider from './components/MTGProvider.jsx';
-
+import './index.css'
 
 
 const router = createBrowserRouter([
@@ -21,10 +19,6 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Workspace />
-      },
-      {
-        path: 'binder',
-        element: <Binder />
       }
     ]
   },

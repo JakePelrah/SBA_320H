@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import Filter from "./Filter/Filter"
+import Filter from "../Filter/Filter"
 import './sidebar.css'
 
 export default function Sidebar() {

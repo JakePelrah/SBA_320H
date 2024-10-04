@@ -1,8 +1,29 @@
-# React + Vite
+Explanations of the technologies used.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Explanations of the approach taken.
 
-Currently, two official plugins are available:
+A link to your live site.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Usage instructions, if relevant.
+
+Unsolved problems.
+
+etc.
+
+
+HTML, CSS, React, JavaScript,
+
+Started with API. Build something that I may use to build Magic decks.
+
+
+[MTG Deck Builder](https://sba320h-630395ad3e95.herokuapp.com/)
+
+Filter cards, drag cards into your deck
+
+
+
+TODO:
+* Add card count by type ( 32 land, 10 creatures, 5 sorcery, etc)
+* Remove cards
+* 
+
