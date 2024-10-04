@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar/Sidebar.jsx"
 import Footer from "./Workspace/Footer.jsx";
-import LightBox from "./Lightbox/LightBox.jsx";
+import LightBox from "./LightBox/LightBox.jsx";
 
 import { useEffect } from "react";
 
@@ -14,7 +14,7 @@ export default function Layout() {
 
     return (<div>
         <Sidebar />
-        <LightBox/>
+        <LightBox />
         <Outlet />
         <Footer />
     </div>)
