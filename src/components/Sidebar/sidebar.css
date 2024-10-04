@@ -63,11 +63,12 @@
 }
 
 .accordion-button {
-    border-radius: .2em !important;
+    border-radius: 1em !important;
     background-color: var(--secondary-color) !important;
     color: var(--navbar-color) !important;
     font-weight: bold;
     box-shadow: none !important;
+
 }
 
 .accordion-collapse {

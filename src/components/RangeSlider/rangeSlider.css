@@ -22,10 +22,11 @@
 }
 .noUi-base {
     background-color: var(--secondary-color);
+    border-radius: 1em;
 }
 .noUi-horizontal {
     height: .5em;
-    border: 1px solid black;
+    border: 1px solid var(--secondary-color);
 }
 
 /* Tooltip */
