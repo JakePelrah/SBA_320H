@@ -8,4 +8,9 @@ Explanation: The card data was taken from https://docs.magicthegathering.io/. It
 
 Usage: Set filter options, select and drag card from the master deck into your own deck.
 
-Unsolved problems: Add a search by name input, remove duplicate cards from data, improve queries, implement infinite scroll instead of limiting to 1000 cards, which will cause some cards to not show up if filter params are not set or if more than 1000 cards share the same filter options.
+Unsolved problems: 
+* Fix query to include all cards/land cards
+* add a search by name input, 
+* remove duplicate cards from data, 
+* improve queries, 
+* implement infinite scroll instead of limiting to 1000 cards.
