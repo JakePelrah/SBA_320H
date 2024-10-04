@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { useMTG } from '../../MTGProvider'
+import { useMTG } from '../MTGProvider'
 import './lightbox.css'
 
 export default function LightBox() {
