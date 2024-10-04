@@ -1,29 +1,11 @@
-Explanations of the technologies used.
+# Magic the Gathering Deck Builder
 
-Explanations of the approach taken.
+Project Link: [MTG Deck Builder](https://sba320h-630395ad3e95.herokuapp.com/)
 
-A link to your live site.
+Tech: This project uses React, CSS, HTML and JavaScript.
 
-Usage instructions, if relevant.
+Explanation: The card data was taken from https://docs.magicthegathering.io/. It was then inserted into a PostgreSQL database hosted on Heroku. A context provider was used to  handle the state of the drag and drop deck builder.
 
-Unsolved problems.
+Usage: Set filter options, select and drag card from the master deck into your own deck.
 
-etc.
-
-
-HTML, CSS, React, JavaScript,
-
-Started with API. Build something that I may use to build Magic decks.
-
-
-[MTG Deck Builder](https://sba320h-630395ad3e95.herokuapp.com/)
-
-Filter cards, drag cards into your deck
-
-
-
-TODO:
-* Add card count by type ( 32 land, 10 creatures, 5 sorcery, etc)
-* Remove cards
-* 
-
+Unsolved problems: Add a search by name input, remove duplicate cards from data, improve queries, implement infinite scroll instead of limiting to 1000 cards, which will cause some cards to not show up if filter params are not set or if more than 1000 cards share the same filter options.
