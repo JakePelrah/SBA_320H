@@ -7,6 +7,12 @@
 .myDeck-card {
     position: relative;
     cursor: grab;
+    transition: transform 0s;
+}
+
+#myDeck .myDeck-card:hover{
+    transform: rotateY(180deg);
+    transition: transform 1s .3s;
 }
 
 #cards, #myDeck {
