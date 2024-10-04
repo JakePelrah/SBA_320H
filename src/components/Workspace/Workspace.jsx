@@ -19,11 +19,11 @@ export default function Workspace() {
     }
 
     const renderCards = cards?.map(cardData =>
-        <Card key={cardData.id} cardData={cardData} />
+        <Card key={cardData.id} cardData={cardData}  />
     )
 
     const renderMyDeck = myDeck?.map(card =>
-        <Card key={card.id} cardData={card} />
+        <Card key={card.id} cardData={card} bisInDeck={true} />
     )
 
     return (<div className="d-flex flex-column workspace">

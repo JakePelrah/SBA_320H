@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export default function Card({ cardData }) {
+export default function Card({ cardData, bisInDeck = false }) {
     const { id, image_url } = cardData
     const [showMenu, setShowMenu] = useState(false)
 
@@ -10,19 +10,18 @@ export default function Card({ cardData }) {
         ev.dataTransfer.effectAllowed = "copy";
     }
 
-
-
     return (
-        <div onMouseEnter={(e) => setShowMenu(true)}
-            onMouseLeave={() => setShowMenu(false)} className="myDeck-card"
+        <div
+            onMouseEnter={bisInDeck ? (e) => setShowMenu(true) : undefined}
+            onMouseLeave={bisInDeck ? (e) => setShowMenu(false) : undefined}
+            className="myDeck-card"
             id={id}
             onDragStart={dragstartHandler}
             draggable>
 
             {showMenu
                 ? <div className="card-overlay d-flex justify-content-center align-items-center gap-2">
-                    <button className="btn overlay-btn">Remove</button>
-                    <button className="btn overlay-btn">Info</button>
+                    {bisInDeck ? <button className="btn overlay-btn">Remove</button> : null}
                 </div>
                 : null
             }
