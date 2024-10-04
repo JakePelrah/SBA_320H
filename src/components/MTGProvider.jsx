@@ -141,13 +141,15 @@ export default function MTGProvider({ children }) {
         }
     ])
 
-
     function addToDeck(card) {
-        card.id = card.id + uuidv4()
-        
+        card.uuid = uuidv4()
         setMyDeck(prevState => [...prevState, card])
     }
 
+    function removeFromDeck(uuid) {
+        const filteredCards = myDeck.filter(card => card.uuid !== uuid )
+        setMyDeck(filteredCards)
+    }
 
     function getCards(colors, type, sliderValues) {
         fetch('cardQuery', {
@@ -165,11 +167,9 @@ export default function MTGProvider({ children }) {
             .then(setCards)
     }
 
-
-
     return (
         <MTGContext.Provider value={{
-            cards, getCards, addToDeck, myDeck
+            cards, getCards, addToDeck, removeFromDeck, myDeck
         }}>
             {children}
         </MTGContext.Provider>

@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { useMTG } from "../MTGProvider";
 import Card from "./Card";
+import { v4 as uuidv4 } from 'uuid';
 import './workspace.css'
 
 export default function Workspace() {
-    const { cards, addToDeck, myDeck } = useMTG()
-
+    const { cards, addToDeck, myDeck, removeFromDeck } = useMTG()
 
     function dropHandler(ev) {
         ev.preventDefault();
@@ -18,12 +18,13 @@ export default function Workspace() {
         ev.dataTransfer.dropEffect = "copy";
     }
 
+   
     const renderCards = cards?.map(cardData =>
-        <Card key={cardData.id} cardData={cardData}  />
+        <Card key={uuidv4()} cardData={cardData} />
     )
 
     const renderMyDeck = myDeck?.map(card =>
-        <Card key={card.id} cardData={card} bisInDeck={true} />
+        <Card key={card.uuid} cardData={card} bisInDeck={true} removeFromDeck={removeFromDeck} />
     )
 
     return (<div className="d-flex flex-column workspace">
