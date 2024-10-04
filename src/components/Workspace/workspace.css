@@ -7,12 +7,12 @@
 .myDeck-card {
     position: relative;
     cursor: grab;
-    transition: transform 0s;
+    /* transition: transform 0s; */
 }
 
 #myDeck .myDeck-card:hover{
-    transform: rotateY(180deg);
-    transition: transform 1s .3s;
+    /* transform: rotateY(180deg); */
+    /* transition: transform 1s .3s; */
 }
 
 #cards, #myDeck {
@@ -62,14 +62,13 @@
     width: 4em !important;
     height: 4em !important;
     cursor: pointer;
-
 }
 
 .workspace-divider{
     border: none;
     opacity: 1;
     height: 10vh;
-    background-color: var(--bg-color);  /* Modern Browsers */
+    background-color: var(--bg-color); 
     color: white;
     font-family: MTG;
 }
