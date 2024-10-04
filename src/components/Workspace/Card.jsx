@@ -9,8 +9,6 @@ export default function Card({ cardData, bisInDeck = false, removeFromDeck }) {
         ev.dataTransfer.effectAllowed = "copy";
     }
 
- 
-
     return (
         <div
             onMouseEnter={bisInDeck ? (e) => setShowMenu(true) : undefined}

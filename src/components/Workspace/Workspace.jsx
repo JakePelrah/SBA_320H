@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useMTG } from "../MTGProvider";
 import Card from "./Card";
 import { v4 as uuidv4 } from 'uuid';
@@ -17,7 +16,6 @@ export default function Workspace() {
         ev.preventDefault();
         ev.dataTransfer.dropEffect = "copy";
     }
-
    
     const renderCards = cards?.map(cardData =>
         <Card key={uuidv4()} cardData={cardData} />
