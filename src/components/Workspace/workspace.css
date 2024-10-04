@@ -64,7 +64,6 @@
 #cards-icon{
     width: 5em;
     height: 5em;
-
 }
 
 .card-overlay{
@@ -77,7 +76,6 @@
     background-color: rgba(21, 21, 21, 0.854);
     border-radius: 1.7em;
     border: 1em solid var(--secondary-color);
-
 }
 
 .overlay-btn{
@@ -90,4 +88,15 @@
     background-color: var(--navbar-hover-color);
     color: white;
     font-weight: bold;
+}
+
+#deck-icon{
+    width: 4em;
+    height: 4em;
+}
+
+#card-count-text{
+    font-family: MTG;
+    font-size: 3em;
+    color: var(--navbar-color);
 }

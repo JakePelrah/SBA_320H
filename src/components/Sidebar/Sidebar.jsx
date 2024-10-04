@@ -37,7 +37,7 @@ export default function Sidebar() {
                 <Filter />
             </div>
 
-            <div className="d-flex justify-content-end">
+            <div className="d-flex justify-content-end mb-3">
                 <button className="btn footer-btn" data-bs-dismiss="offcanvas" aria-label="Close">
                     <img src="/icons/caret-left-fill.svg"></img>
                 </button>

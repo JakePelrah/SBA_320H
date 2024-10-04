@@ -10,16 +10,12 @@
     --secondary-color: #454545;
 }
 
-body{
-    background-color: var(--bg-color);
-}
-
 footer {
+    background-color: var(--bg-color);
     width: 100%;
     position: absolute;
     bottom: 0;
     padding: 0;
-    margin: 0;
 }
 
 .footer-btn img {
@@ -30,4 +26,5 @@ footer {
 .btn {
     border: none;
 }
+
 
