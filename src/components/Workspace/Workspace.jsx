@@ -2,14 +2,21 @@ import { useMTG } from "../MTGProvider";
 import Card from "./Card";
 import { v4 as uuidv4 } from 'uuid';
 import './workspace.css'
+import { useEffect, useRef } from "react";
 
 export default function Workspace() {
     const { cards, addToDeck, myDeck, removeFromDeck } = useMTG()
+    const myDeckRef = useRef(null)
+
+
+    useEffect(()=>{
+        myDeckRef.current.scrollLeft = myDeckRef.current.scrollWidth
+    },[myDeck])
 
     function dropHandler(ev) {
         ev.preventDefault();
         const data = ev.dataTransfer.getData("application/my-app");
-        addToDeck(JSON.parse(data))
+        addToDeck(JSON.parse(data))        
     }
 
     function dragoverHandler(ev) {
@@ -33,7 +40,7 @@ export default function Workspace() {
 
         <div className="workspace-divider"></div>
 
-        <div id="myDeck" className="d-flex" onDrop={dropHandler} onDragOver={dragoverHandler}>
+        <div ref={myDeckRef} id="myDeck" className="d-flex" onDrop={dropHandler} onDragOver={dragoverHandler}>
             {renderMyDeck}
         </div>
     </div>)
